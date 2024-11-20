@@ -19,4 +19,3 @@ class ModelCheckpoint:
         if self.best_score is None or self.is_better(current_score):
             self.best_score = current_score
             model.save_pretrained(self.filepath)
-            print(f"Saved at: {current_score}")
