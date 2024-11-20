@@ -6,7 +6,6 @@ from torch import Generator
 from torch.optim import AdamW
 from dotenv import load_dotenv
 from data_utils import RecipeDataset
-from torch.optim.lr_scheduler import StepLR, LinearLR
 from torch.utils.data import DataLoader, RandomSampler
 from transformers import GPT2LMHeadModel, GPT2TokenizerFast
 
