@@ -1,0 +1,7 @@
+{
+    "seq_length":180,
+    "pad_token":"<|pad|>",
+    "unk_token":"<|unknown|>",
+    "eos_token":"<|endoftext|>",
+    "bos_token":"<|startoftext|>"
+}
