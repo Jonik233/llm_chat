@@ -37,7 +37,7 @@ def generate_text(model: GPT2LMHeadModel, tokenizer: GPT2TokenizerFast, prompt: 
     inputs = tokenizer(input_text, truncation=True, max_length=seq_length, return_tensors="pt").to(device=model.device)
 
     outputs = model.generate(**inputs, max_length=max_output_length, do_sample=True, top_k=0, top_p=0.92, pad_token_id=tokenizer.pad_token_id)
-    text = tokenizer.decode(*outputs, skip_special_tokens=True)
+    text = tokenizer.decode(*outputs, skip_special_tokens=True).strip()
     return text
 
 
