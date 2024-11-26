@@ -1,10 +1,10 @@
 import os
 import torch
 from config import Config
-from trainer import Trainer
 from torch import Generator
 from torch.optim import AdamW
 from dotenv import load_dotenv
+from train_utils import Trainer
 from data_utils import RecipeDataset
 from torch.utils.data import DataLoader, RandomSampler
 from transformers import GPT2LMHeadModel, GPT2TokenizerFast
