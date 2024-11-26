@@ -1,6 +1,6 @@
 {
     "val_p":0.2,
-    "epochs":3,
+    "epochs":4,
     "batch_size":4,
     "epsilon":1e-8,
     "random_seed":42,
