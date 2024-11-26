@@ -19,7 +19,7 @@ class RecipeDataset(Dataset):
     @data.setter
     def data(self, df:pd.DataFrame):
         if isinstance(df, pd.DataFrame):
-            self._data = df.values.squeeze(axis=1)[:10]
+            self._data = df.values.squeeze(axis=1)
     
     def _tokenize(self, sequence):
         inputs = self.tokenizer(sequence, truncation=True, padding="max_length", max_length=self.seq_length, return_tensors="pt").to(device=self.device)
