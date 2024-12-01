@@ -1,6 +1,5 @@
 import os
 import torch
-import argparse
 from typing import Tuple
 from config import Config
 from dotenv import load_dotenv
@@ -42,11 +41,9 @@ def generate_text(model: GPT2LMHeadModel, tokenizer: GPT2TokenizerFast, prompt: 
 
 
 if __name__ == '__main__':
-    parser = argparse.ArgumentParser(description="Generate text using a pretrained GPT-2 model.")
-    parser.add_argument("prompt", type=str, help="Prompt for text generation")
-    args = parser.parse_args()
-
-    prompt = args.prompt
     model, tokenizer = load_model_and_tokenizer()
-    generated_text = generate_text(model, tokenizer, prompt)
-    print(generated_text)
+    while True:
+        prompt = input("Enter ingredients: ")
+        if prompt == "q": break
+        generated_text = generate_text(model, tokenizer, prompt)
+        print(generated_text + "\n")
